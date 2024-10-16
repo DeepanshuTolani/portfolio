@@ -1,0 +1,453 @@
+/* Global Styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFD700;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header .logo i {
+    color: #ff652f;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ff652f;
+}
+
+/* Hero Section */
+section.home {
+    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+section.home .content {
+    max-width: 600px;
+    color: #fff;
+}
+
+section.home .content h2 {
+    font-size: 2.5rem;
+}
+
+section.home .content h2 span {
+    color: #ff652f;
+}
+
+section.home .content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+section.home .content .btn {
+    display: inline-block;
+    background: #ff652f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+section.home .content .btn:hover {
+    background: #e04b24;
+}
+
+section.home .socials {
+    margin-top: 20px;
+}
+
+section.home .socials .social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+section.home .socials .social-icons li {
+    margin: 0 10px;
+}
+
+section.home .socials .social-icons li a {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* About Section */
+section.about {
+    padding: 80px 0;
+}
+
+section.about .heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section.about .heading i {
+    color: #ff652f;
+    font-size: 2rem;
+}
+
+section.about .heading span {
+    color: #ff652f;
+}
+
+section.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+section.about .card-container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #FFF8DC;
+}
+
+.card-front img {
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    width: 150%;
+    height: auto;
+}
+
+.card-back {
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg);
+    border-radius: 12px;
+}
+
+section.about .row .content {
+    flex: 2;
+    padding-left: 50px;
+}
+
+section.about .row .content h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+section.about .row .content .tag {
+    display: inline-block;
+    background: #ff652f;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+section.about .row .content p {
+    margin-bottom: 20px;
+}
+
+section.about .row .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.about .row .content .box {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+section.about .row .content .resumebtn .btn {
+    background: #ff652f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+section.about .row .content .resumebtn .btn:hover {
+    background: #e04b24;
+}
+
+/* Skills Section */
+section.skills {
+    padding: 80px 0;
+    background: #f4f4f4;
+}
+
+section.skills .heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section.skills .heading i {
+    color: #ff652f;
+    font-size: 2rem;
+}
+
+section.skills .heading span {
+    color: #ff652f;
+}
+
+.skills-grid {
+    background-color: #FFD700;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-column {
+    flex-basis: 25%;
+    margin: 20px;
+}
+
+.skill {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border: 1px solid #FFD700;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    font-weight: bold;
+    margin-top: 0;
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    section.about .row .content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    section.about .row .content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1E3A8A;
+    color: #FFD700;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #FFD700;
+}
+
+footer .heart {
+    color: red;
+    font-size: 1.2em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Section */
+section.contact {
+    padding: 80px 0;
+}
+
+section.contact .heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section.contact .heading i {
+    color: #ff652f;
+    font-size: 2rem;
+}
+
+section.contact .heading span {
+    color: #ff652f;
+}
+
+section.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section.contact form .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+section.contact form .input-box input,
+section.contact form .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+section.contact form .input-box span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+section.contact form .input-box input:focus + span,
+section.contact form .input-box input:valid + span,
+section.contact form .input-box textarea:focus + span,
+section.contact form .input-box textarea:valid + span {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #ff652f;
+}
+
+section.contact form .resumebtn .btn {
+    display: inline-block;
+    background: #ff652f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+section.contact form .resumebtn .btn:hover {
+    background: #e04b24;
+}
+/* Achievements Section Styling */
+section.achievements {
+    padding: 80px 0;
+    background-color: #FFD700; /* Gold background color */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+section.achievements .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+section.achievements .heading i {
+    color: #ff652f;
+    font-size: 2.5rem;
+}
+
+section.achievements .heading span {
+    color: #ff652f;
+}
+
+section.achievements .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left for the container */
+}
+
+section.achievements .achievement-category {
+    margin-bottom: 40px;
+}
+
+section.achievements .achievement-category h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section.achievements .achievement-category ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section.achievements .achievement-category ul li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+    
